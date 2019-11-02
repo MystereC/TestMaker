@@ -1,0 +1,101 @@
+<app-navbar></app-navbar>
+
+<div class="row">
+
+    <div class="col s12 m12 l12">
+
+    <br>
+
+    <div id="cardPanel">
+        LISTE DE PROFESSEUR <i class="material-icons">person</i></div>
+
+        <br>
+
+    <div id="search" class="search-div">
+      <mat-form-field class="search-form-field" floatLabel="never" id="mat-form-field">
+        <input matInput [(ngModel)]="searchKey" placeholder="Rechercher un professeur" autocomplete="off" (keyup)="applyFilter()">
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey" (click)="onSearchClear()">
+          <mat-icon> close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+
+
+    <div id="matElevation" class="mat-elevation-z8">
+      <mat-table [dataSource]="listData" matSort>
+
+
+        <ng-container matColumnDef="Classe">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Cours </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.title}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="firstName">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Nom Complet</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.professorCreated.firstName}} {{element.professorCreated.lastName}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.professorCreated.email}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef >S'inscrire</mat-header-cell>
+          <mat-cell *matCellDef="let row">
+            <a><button class="small material-icons pull-right" (click)="inscrire(row)">add_circle</button></a>
+            <!--<button class="mdc-button"><span class="mdc-button__label">S'inscrire</span></button>
+          <button mat-icon-button color="warn"><mat-icon>delete_outline</mat-icon></button>-->
+         </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="loading">
+          <mat-footer-cell *matFooterCellDef colspan="6">
+            Chargement des données...
+          </mat-footer-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="noData">
+          <mat-footer-cell *matFooterCellDef colspan="6">
+            Pas de donnée.
+          </mat-footer-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}"></mat-footer-row>
+        <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}"></mat-footer-row>
+      </mat-table>
+      <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>-->
+      <mat-paginator [pageSize]="5" showFirstLastButtons></mat-paginator>
+    </div>
+    
+</div>
+</div>
+
+
+<footer class="page-footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">Site developpé dans le cadre d'un projet universitaire</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Developpers</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Tony Vo</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Ghassen Belkhir</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Kevin Low Pen</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Junior Mabika</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2018 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>

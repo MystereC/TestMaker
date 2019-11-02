@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+<div class="row">
+  <div id="global" class="col s12 m12 l12">
+    <br />
+    <h6 id="cardPanel" *ngIf="this.userService.isStudent()">
+      PROFIL ETUDIANT <i class="material-icons">person</i></h6>
+      <h6 id="cardPanel" *ngIf="this.userService.isProfessor()">
+        PROFIL ENSEIGNANT <i class="material-icons">person</i></h6>
+    <table id="table" style="margin-left: auto" class="striped">
+      <tbody>
+        <tr>
+          <td>Identifiant/Mail</td>
+          <td>{{user.email}}</td>
+        </tr>
+        <tr>
+          <td>Nom</td>
+          <td>{{user.lastName}}</td>
+        </tr>
+        <tr>
+          <td>Prénom</td>
+          <td>{{user.firstName}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+  </div>
+</div>
+
+
+<footer class="page-footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">Site developpé dans le cadre d'un projet universitaire</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Developpers</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Tony Vo</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Ghassen Belkhir</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Kevin Low Pen</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Junior Mabika</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2018 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,27 @@
+<div class="modal-content">
+  <div class="sm-jumbotron center-align">
+      <h4>Cr&eacute;ation d'une classe <i class="small material-icons">assignment_turned_in</i></h4>
+  </div>
+ <form [formGroup]="classeForm">
+      <div class="row">
+          <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">title</i>
+              <input id="title" [(ngModel)]="classe.title" type="text" class="validate" formControlName="title" required>
+              <label for="title">Nom de la classe</label>
+          </div>
+          <div class="input-field col s12 m6 l6">
+                <i class="material-icons prefix">comment</i>
+                <textarea id="comment" [(ngModel)]="classe.university" class="materialize-textarea" formControlName="comment" required></textarea>
+                <label for="comment">Université</label>
+            </div>
+      </div>
+  </form>
+</div>
+
+<div class="sm-jumbotron2 center-align">
+
+    <button (click)="onAddTitle()" class="waves-effect waves-light btn modal-close" [disabled]="classeForm.invalid">Cr&eacute;er
+    </button>
+</div>
+
+

@@ -1,0 +1,80 @@
+
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+    <div class="row">
+         
+            <div class="card ">
+              <div class="card-content black-text col l12 col s12 col m12">
+                <div class="center-align">
+                  <h4>Récapitulation <i class="material-icons">format_list_numbered</i></h4>
+                </div>
+                <hr>
+                <h4>Questionnaire: {{quiz.title}}</h4>
+                <p *ngIf="!quiz.description; then trueTemplate; else falseTemplate"></p>
+                <ng-template #trueTemplate>
+                  <b>Pas de description</b>
+                </ng-template>
+                <ng-template #falseTemplate>
+                  Description: {{quiz.description}}
+                </ng-template>
+                <p><ng-container *ngIf="quiz._id != null; else elseTemplate">
+                  Modifié le {{quiz.dateCreation | date: 'fullDate': undefined : 'fr'}}
+                </ng-container>
+                <ng-template #elseTemplate>
+                    Créé le {{quiz.dateCreation | date: 'fullDate': undefined : 'fr'}}
+                </ng-template>
+                 </p>
+
+                <ul class="collection with-header">
+                  <li class="collection-header" *ngFor="let quest of quiz.listQuestion; let i = index">
+                    <h5><b>Question {{i+1}}:</b> {{quest.formuler}} </h5>
+                    <hr />
+                    <div class="row">
+                        <div class="col s12" *ngFor="let prop of quest.listProposition; let j = index">
+                          <p><ng-container *ngIf="prop.isTrue==true; then thenTemplate; else elseTemplate"></ng-container>
+                          <ng-template #thenTemplate>
+                              <b>Choix {{j+1}}:</b> {{prop.choice}} <i>(réponse correcte avec {{prop.point}} point)</i>
+                          </ng-template>
+                          <ng-template #elseTemplate>
+                              <b>Choix {{j+1}}:</b> {{prop.choice}} 
+                          </ng-template>               
+                          </p>
+                        </div>
+                      </div>
+                  </li>
+                </ul>
+
+              </div>
+             
+             
+                  
+                <div class="row">  
+                    <button class="btn green col l1  col m1  offset-l2 offset-m3 offset-s1 " (click)="validate()">
+                          Valider
+                        </button>                              
+                    <button class="btn orange modal-trigger col l1   col m1 offset-l1 offset-m1  " data-target="preview">
+                        Aperçu
+                    </button>
+                      <button class="btn blue col l1 col m1 offset-l1  offset-m1   " (click)="goToModify()">
+                          Modifier
+                        </button>
+                        <button class="btn red col l1  col m1 offset-l1 offset-m1  " (click)="discard()">
+                            Annuler
+                          </button>
+                  </div>
+            
+            </div>
+          
+        </div>
+
+  
+</div>
+
+<app-footer></app-footer>
+
+
+<!-- modal -->
+<div class="modal" id="preview">
+  <app-preview-quiz></app-preview-quiz>
+
+<!-- end modal -->

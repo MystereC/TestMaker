@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="col s12 m12 l6">
+    <br>
+    <div id="signUpCard">
+      <div class="card">
+        <div class="sm-jumbotron2 center-align">
+          <h4>Inscription <i class="small material-icons">create</i></h4>
+        </div>
+
+        <!-- Error message -->
+        <div class="alert" *ngIf="serverErrorMessages">
+          {{serverErrorMessages}}
+        </div>
+        <form class="col s12 white" #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" style="margin-bottom: 0px" #firstName="ngModel" [(ngModel)]="userService.selectedUser.firstName"
+                name="firstName" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }">
+              <div *ngIf="signUpForm.submitted && !firstName.valid">
+                <label id="validation-mess" class="validation-message">Ce champ est requis</label>
+              </div>
+              <label><i class="tiny material-icons">accessibility</i> Nom</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" #lastName="ngModel" [(ngModel)]="userService.selectedUser.lastName" name="lastName"
+                required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !lastName.valid }">
+              <div *ngIf="signUpForm.submitted && !lastName.valid">
+                <label id="validation-mess" class="validation-message">Ce champ est requis</label>
+              </div>
+              <label><i class="tiny material-icons">accessibility</i> Prenom</label>
+            </div>
+          </div>
+
+ 
+          <div class="row1">
+            <!--<input type="text" #role="ngModel" [(ngModel)]="userService.selectedUser.role" name="role" placeholder="role"
+              required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !role.valid }">
+            <div *ngIf="signUpForm.submitted && !role.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>-->
+
+            <label><i class="tiny material-icons">group</i> Choisissez votre rôle</label>
+            <select #role="ngModel" [(ngModel)]="userService.selectedUser.role" name="role">
+              <!--<div *ngIf="signUpForm.submitted && !role.valid">
+                    <label style="color: #e91e63" class="validation-message">Ce champ est requis</label>
+                  </div>-->
+              <option value="Professeur">Professeur</option>
+              <option value="Etudiant">Etudiant</option>
+            </select>
+
+          </div>
+
+          <!---->
+
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" required
+                [pattern]="emailRegex" [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+              <div *ngIf="signUpForm.submitted && email.errors">
+                <label id="validation-mess" *ngIf="email.errors.required" class="validation-message">Ce champ est
+                  requis</label>
+                <label id="validation-mess" *ngIf="email.errors.pattern" class="validation-message">Adresse email
+                  invalide</label>
+              </div>
+              <label data-error="Invalid email"><i class="tiny material-icons">email</i> Email</label>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="input-field col s12">
+              <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password"
+                minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+              <div *ngIf="signUpForm.submitted && password.errors">
+                <label id="validation-mess" *ngIf="password.errors.required" class="validation-message">Ce champ est
+                  requis</label>
+                <label id="validation-mess" *ngIf="password.errors.minlength" class="validation-message">Minimum de 4
+                  caracteres</label>
+              </div>
+              <label><i class="tiny material-icons">lock_outline</i> Mot de passe</label>
+            </div>
+
+          </div>
+
+          <!--   <div class="row ">
+            <div class="input-field col s12">
+              <input name="motdepasse1" [(ngModel)]="passwordRepeat" type="password" id="inputPassword2" required>
+              <label><i class="tiny material-icons">lock</i>Répéter mot de passe</label>
+            </div>
+          </div>-->
+
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="button" type="submit" value="S'inscrire" class="btn">
+            </div>
+          </div>
+
+          <!--<div class="row">
+            <div class="input-field col s12">
+              <input type="submit" value="Sign Up">
+            </div>
+          </div>-->
+
+        </form>
+
+        <!-- Success message -->
+        <div class="success" *ngIf="showSucessMessage">
+          Sauvegarde réussi
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+table {
+    width: 100%;
+    display: table;
+    border-collapse :collapse;
+    border-spacing : 0;
+    border : 1px black solid; 
+  }
+  
+  ul.collapsible{
+     margin-top: 0px;
+     margin-bottom: 0px;
+  }
+  
+  div.collapsible-body{
+     padding: 0px;
+  }
+  
+  div.input-field.col.s7{
+     margin-top: 10px;
+     margin-bottom: 0px;
+  }
+  
+  div.col-lg-6{
+     padding: 5px
+  }
+  
+  .collapsible-header{
+     display :flex;
+     cursor: pointer;
+     -webkit-tap-highlight-color: transparent ;
+     line-height : 1.5;
+     padding : 1rem;
+     background-color:white;
+     border-bottom : none;
+  }
+  
+  #fieldPassword{
+    max-width: 600px;
+    margin-left: auto;
+    left:auto;
+    right:auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .page-footer {
+    padding-top: 20px;
+    color: white;
+    background-color: rgb(59, 163, 153);
+    position: absolute;
+    top: 700px;
+    width: 100%; 
+  }
+  
+  #cardPanel{
+    background-color: rgb(100, 181, 246);
+    text-align: center;
+    color: white;
+    height: 40px;
+    max-width: 1200px;
+    margin: 20px 0 20px 0; 
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  }
+  
+  #global {
+    /*margin-left: auto;
+    margin-right: auto;*/
+    position : absolute;
+  }
+  
+  #table{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+  
+  #changePassword{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+
+  #button{
+    text-align: center;
+  }
+  
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+  }
+  
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+      table, thead, tbody, th, td, tr { 
+          display: block; 
+      }
+      
+      thead tr { 
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+      
+      tr { border: 1px solid #ccc; }
+      
+      td { 
+          border: none;
+          border-bottom: 1px solid #eee; 
+          position: relative;
+      }
+
+      
+	td:before { 
+    content: attr(data-label); 
+    font-weight: bold;
+  }
+  }

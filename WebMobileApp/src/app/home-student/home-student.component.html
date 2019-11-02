@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+
+<div class="fixed-action-btn hide-on-large-only">
+    <a class="btn-floating btn-large red">
+        <i class="material-icons">add</i>
+    </a>
+    <ul>
+        <li><a class="btn-floating teal" [routerLink]="[ '/profile' ]">Profil</a></li>
+        <li><a class="btn-floating blue darken-1" [routerLink]="[ '/search-classe' ]">Class</a></li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col s12 m12 l9">
+        <br />
+
+        <h6 id="cardPanel">
+            MES DERNIERES CLASSES INSCRITES <i class="material-icons">group</i></h6>
+        <div class="collection with-header s12 m8 l12" *ngFor="let item of myclasses">
+
+            <a class="collection-item">
+                <div><i class="material-icons">archive</i> {{item.title}}
+                    <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a></div>
+            </a>
+        </div>
+        <br>
+        <div class="hide-on-large-only"> <a [routerLink]="[ '/classe-list-student' ]"
+                class="waves-effect waves-light btn-small">toutes mes classes</a> </div>
+
+        <h6 id="cardPanel">
+            MES EXAMENS A REPONDRE <i class="material-icons">edit</i></h6>
+
+        <div class="collection with-header s12 m8 l12" *ngFor="let class of myclasses">
+
+            <div *ngFor="let item of class.arrayOfExams ">
+
+                <a class="collection-item">
+                    <div><i class="material-icons">archive</i> {{item.title}}
+                        <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a></div>
+                </a>
+
+            </div>
+        </div>
+        <br>
+        <div class="hide-on-large-only"> <a [routerLink]="[ '/exam-list-student' ]"
+                class="waves-effect waves-light btn-small">Tous mes Examens</a> </div>
+
+        <h6 id="cardPanel">MES SONDAGES A REPONDRE <i class="material-icons">move_to_inbox</i></h6>
+
+        <div class="collection with-header s12 m12 l12" *ngFor="let class of myclasses">
+                
+                <a *ngFor="let item of class.arrayOfPolls" class="collection-item modal-trigger" (click)="onSelectPoll(item)">
+                    <div><i class="material-icons">archive</i> {{item.question}} 
+                        <a class="secondary-content"><i class="material-icons">visibility</i></a></div>
+                </a>
+        </div>
+        <br>
+        <div class="hide-on-large-only"> <a [routerLink]="[ '/sondage-list-student' ]"
+                class="waves-effect waves-light btn-small">Sondages à repondre</a> </div>
+
+    </div>
+
+    <div class="col s12 m12 l3">
+        <div id="cardPanelAll" class="row hide-on-med-and-down">
+            <br />
+            <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+                <br />
+                <a id="cardPanelIcon" [routerLink]="[ '/profile' ]">Voir Profil
+                    <br /> <i class="small material-icons">person</i></a>
+            </div>
+
+            <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+                <br />
+                <a id="cardPanelIcon" [routerLink]="[ '/search-classe' ]">Rejoindre une classe
+                    <br /> <i class="small material-icons">add_circle</i></a>
+            </div>
+            <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+                <br />
+                <a id="cardPanelIcon" [routerLink]="[ '/classe-list-student' ]">Liste des classes inscrites
+                    <br /> <i class="small material-icons">group</i></a>
+            </div>
+
+            <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+                <br />
+                <a id="cardPanelIcon" [routerLink]="[ '/exam-list-student' ]">Voir tous mes examens
+                    <br /> <i class="small material-icons">format_list_numbered</i></a>
+            </div>
+            <!--<div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+                <br />
+                <a id="cardPanelIcon" [routerLink]="[ '/exam-list-student' ]">Liste des examens à répondre
+                    <br /> <i class="small material-icons">edit</i></a>
+            </div>-->
+            <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+                <br />
+                <a id="cardPanelIcon" [routerLink]="[ '/sondage-list-student' ]">Liste des sondages à répondre
+                    <br /> <i class="small material-icons">move_to_inbox</i></a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

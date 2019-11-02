@@ -1,0 +1,26 @@
+<ul class="sidenav" id="mobile-button">
+  <li routerLinkActive="active"><a id="choiceSidenav" href="http://localhost:4200/home">Accueil</a></li>
+  <li routerLinkActive="active"><a id="choiceSidenav" href="http://localhost:4200/home">Accueil Ens</a></li>
+  <li routerLinkActive="active"><a id="choiceSidenav" href="http://localhost:4200/home-student">Accueil Etu</a></li>
+  <li (click)="onLogout()" value="Logout"> <a>Déconnexion</a></li>
+</ul>
+
+<ul id="slide-out" class="sidenav sidenav-fixed">
+  <li>
+    <div class="user-view">
+      <div class="background" style="background-color: rgb(8,79,112)">
+      </div>
+      <a href="#user"><img class="circle"></a>
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div>
+  </li>
+  <li routerLinkActive="active"><a id="choiceSidenav" href="http://localhost:4200/home">Accueil Ens</a></li>
+  <li routerLinkActive="active"><a id="choiceSidenav" href="http://localhost:4200/home-student">Accueil Etu</a></li>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li (click)="onLogout()" value="Logout"> <a style="color:black">Déconnexion</a></li>
+</ul>
+
+<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>

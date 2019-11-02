@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+
+<div class="row" *ngIf="quizService.listOfQuestion">
+
+  <div class="col s12 m12 l12">
+    <div id="contentQuizzAnswer">
+      <div class="card-panel" style="color:white; background-color:  #64B5F6">
+        <h4> <i class="material-icons">format_list_numbered</i> Examen : {{  myExam.title}} du
+          {{myExam.dateCreation | date :'fullDate' : undefined : 'fr'}}</h4>
+      </div>
+      <br />
+
+      <div class="card">
+        <!--  Barre du temps -->
+        <span>Temps écoulés : {{quizService.displayTimeElapsed()}}</span>
+        <div class="progress">
+          <div class="determinate" [style.width.%]="(quizService.QuestionNumberProgress+1)*10"></div>
+        </div>
+
+        <!--   Fin BArre du temps -->
+        <div class="card-content white-text">
+          <!--   le numero de la question
+              <span class="card-title activator grey-text text-darken-4">{{quizService.QuestionNumberProgress+1}}</span>
+
+                 On affiche l enoncer de la question -->
+          <p style="color:black">{{quizService.listOfQuestion[quizService.QuestionNumberProgress].formuler}}</p>
+        </div>
+        <div class="card-action">
+          <!--     les choix possibles -->
+
+
+
+          <form (ngSubmit)="onSubmit(f,quizService.listOfQuestion[quizService.QuestionNumberProgress].formuler)"
+            #f="ngForm">
+            <ng-container
+              *ngFor="let option of quizService.listOfQuestion[quizService.QuestionNumberProgress].listProposition;let i = index">
+              <div *ngIf="option.isTrue != null" class="collection-item">
+                <label for={{i}}>
+                  <input type="checkbox" id={{i}} name={{i}} ngModel />
+                  <span>{{option.choice}}</span>
+
+                </label>
+              </div>
+            </ng-container>
+            <br>
+            <button class="btn waves-effect" type="submit">
+              <div *ngIf="quizService.QuestionNumberProgress === lengthQn; else Suivant">
+                soumettre
+              </div>
+              <ng-template #Suivant>
+                Suivant
+              </ng-template>
+            </button>
+
+          </form>
+
+
+
+          <!--   fin des choix possibles -->
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+<app-footer></app-footer>

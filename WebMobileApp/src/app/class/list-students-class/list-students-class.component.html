@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<div class="row">
+  <div id="global" class="col s12 m12 l12">
+    <br />
+    <h6 id="cardPanel">
+      ETUDIANTS INSCRITS  <i class="material-icons">group</i></h6>
+    <table id="table" style="margin-left: auto" class="highlight">
+      <thead class="head-row">
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody class="sort-data-set " *ngFor="let item of myStudents">
+        <tr class="single-hover-row">
+          <td data-label="Nom : ">{{item.firstName}}</td>
+          <td data-label="Prénom : ">{{item.lastName}}</td>
+          <td data-label="Email : ">{{item.email}}</td>
+          <td id="button"> 
+          <a class="btn red"><i class="material-icons" (click)="deleteStudent(item)">delete_forever</i></a></td>
+
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+

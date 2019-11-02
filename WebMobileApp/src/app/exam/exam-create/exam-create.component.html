@@ -1,0 +1,26 @@
+<div class="modal-content">
+    <div class="sm-jumbotron center-align">
+        <h4>Cr&eacute;ation d'examen <i class="material-icons">format_list_numbered</i></h4>
+    </div>
+    <form [formGroup]="myForm">
+        <br />
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                <i class="material-icons prefix">title</i>
+                <input id="title" type="text" class="validate" formControlName="title" required>
+                <label for="title">Titre </label>
+            </div>
+
+            <div class="input-field col s12 m6 l6">
+                <i class="material-icons prefix">comment</i>
+                <textarea id="comment" class="materialize-textarea" formControlName="comment"></textarea>
+                <label for="comment">Commentaire</label>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="sm-jumbotron2 center-align">
+    <button (click)="navigate()" class="waves-effect waves-light btn modal-close" [disabled]="myForm.invalid">Cr&eacute;er
+    </button>
+</div>

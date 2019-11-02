@@ -1,0 +1,26 @@
+span.character-counter{
+    display:none;
+}
+
+
+span.character-counter{
+    min-width: 1px;
+  }
+  
+nav .nav-wrapper{
+    position: relative;
+    height: 100%;
+    background-color: rgb(8,79,112);
+  }
+
+  #bottom {
+    position: absolute;
+    display: inline-block;
+    top: 700px;
+    padding-right: 90px;
+    border-top:gainsboro solid 0.1px;
+}
+
+nav ul a#bottom:hover{
+  background-color:inherit; 
+}

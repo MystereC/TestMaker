@@ -1,0 +1,95 @@
+<div class="panel panel-default">
+
+    <app-navbar></app-navbar>
+    <div id="containerFluid" class="container-fluid">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                    <div class="card">
+                        <div class="card-content black-text">
+                            <div class="center-align">
+                                <h4>Création de questions <i class="material-icons">edit</i></h4>
+                            </div>
+                            <form [formGroup]="myForm">
+                                <div formArrayName="questions">
+                                    <div *ngFor="let quest of myForm.get('questions').controls; let i=index">
+
+                                        <fieldset class="field_rad">
+                                            <legend>
+                                                <h4>Question {{i+1}} </h4>
+                                            </legend>
+                                            <div [formGroupName]="i">
+
+                                                <div class="row"><span style="float: right; margin-right: 10px"><button
+                                                            class="btn-floating red" (click)="deleteQuestion(i)" *ngIf="myForm.controls.questions.length > 1"><i
+                                                                class="material-icons prefix">delete_forever</i></button></span>
+                                                    <div class="col s12 m4 l2"></div>
+                                                    <div class="col s12 m4 l8">
+                                                        <label for="formuler">Question</label>
+                                                        <input id="formuler" formControlName="formuler" class="validate"
+                                                            required />
+
+                                                    </div>
+                                                    <div class="col s12 m4 l2"></div>
+                                                </div>
+
+                                                <div formArrayName="propositions">
+
+                                                    <div *ngFor="let prop of quest.get('propositions').controls; let j=index">
+                                                        <fieldset class="field_rad">
+                                                            <legend>
+                                                                <h5>Propositon {{j+1}} </h5>
+                                                            </legend>
+                                                            <div [formGroupName]="j">
+                                                                <div class="row">
+                                                                    <div class="col s12 m6 l6">
+                                                                        <input placeholder="Réponse" type="text"
+                                                                            formControlName="choice" class="validate"
+                                                                            required />
+                                                                    </div>
+                                                                    <div class="col s12 m6 l3">
+                                                                        <p style="margin-top: 15px;">
+                                                                            <label for="{{i+1}}+{{j+1}}">
+                                                                                <input type="checkbox" FormControlName="isTrue"
+                                                                                    (change)="checkValue($event ,i,j)"
+                                                                                    id="{{i+1}}+{{j+1}}" />
+                                                                                <span> Réponse correcte </span>
+                                                                            </label>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="col s12 m6 l2">
+                                                                        <input id="point" type="number" formControlName="point"
+                                                                            class="validate" placeholder="Point" />
+                                                                    </div>
+
+                                                                    <div class="col s12 m6 l1">
+                                                                        <button class="btn-floating red" *ngIf="quest.controls.propositions.length > 1"
+                                                                            (click)="deleteProposition(quest.controls.propositions, j)">
+                                                                            <i class="material-icons prefix">delete_forever</i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                    </div><br />
+                                                    <div class="center-align"><button class="btn-floating blue" (click)="addNewProposition(quest.controls.propositions)"><i
+                                                                class="material-icons prefix">add_box</i></button></div>
+                                                </div>
+
+                                            </div>
+                                        </fieldset>
+
+                                    </div>
+                                </div>
+                            </form>
+                            <br>
+                            <button class="btn blue pull left" (click)="addNewQuestion()">Ajouter question</button>
+                            <button class="btn green pull right" (click)="save()">Sauvegarder</button>
+                            <br />
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

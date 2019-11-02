@@ -1,0 +1,15 @@
+.field_rad {
+    border:2px solid cadetblue;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;	
+    border-radius:10px;
+  }
+
+  .sm-jumbotron2 {
+    /*background-color: white;*/
+    margin: 20px;
+  }
+  
+  div.modal-content{
+    padding: 0;
+  }

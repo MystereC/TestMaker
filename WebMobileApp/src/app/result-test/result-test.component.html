@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+<div class="row">
+  <div class="col s12 m12 l12">
+    <div style="margin-left: auto; margin-right: auto; max-width: 1200px; color: white; background-color:  #64B5F6" class="card-panel">
+      <h4><i class="Medium material-icons">format_list_numbered</i> Examen : {{myExam.title}} du {{myExam.dateCreation | date :'fullDate' : undefined : 'fr'}}.</h4>
+    </div>
+    <h5 style="margin-left: auto; margin-right: auto; max-width: 1200px">Titre du Quiz : {{myExam.listQuiz[0].title}} </h5>
+  </div>
+
+  <div class="col s12 m12 l12">
+    <div style="margin-left: auto; margin-right: auto; max-width: 1200px">
+      <div style="max-width: 300px;" class="center-align card-panel col s3 m3 l3">
+        Votre Note <br /> <i class="material-icons">mood</i>
+        <h4> {{resultQuestions.totalScore}} / {{resultQuestions.totalPoints}}</h4>
+      </div>
+      <!-- list de questionss -->
+      <div style="max-width: 900px;" class="col s9 m9 l9">
+        <ul id="collapsibleResult" class="collapsible">
+          <li *ngFor="let qstn of listOfQuestion;let j=index">
+
+            <div class="collapsible-header" *ngIf="resultQuestions.answersList[j].correction.toString()=='correct'.toString()">
+              {{j+1}}. {{qstn.formuler}}              
+              <i class="material-icons">check</i>
+            </div>
+
+            <div class="collapsible-header" *ngIf="resultQuestions.answersList[j].correction.toString()=='incomplete'.toString()">
+                {{j+1}}) {{qstn.formuler}}
+                <i class="material-icons">gesture</i>
+              </div>
+
+              <div class="collapsible-header" *ngIf="resultQuestions.answersList[j].correction.toString()=='incorrect'.toString()">
+                  {{j+1}}) {{qstn.formuler}}
+                  <i class="material-icons">close</i>
+                </div>
+
+
+
+            <div class="collapsible-body grey lighten-4" >
+              <p *ngFor="let choic of qstn.listProposition;let i=index">
+                <i class="material-icons"
+                  *ngIf="resultQuestions.answersList[j].listProposition[i].hisChoice">arrow_right_alt</i>
+                {{choic.choice}}</p>
+            </div>
+
+            <div class="collapsible-header"
+              *ngIf="resultQuestions.answersList[j].correction.toString()=='correct'.toString()"
+              style="background-color: green; color: white">
+              {{testCorrectOrNot(resultQuestions.answersList[j].correction)}}
+            </div>
+
+            <div class="collapsible-header"
+              *ngIf="resultQuestions.answersList[j].correction.toString()=='incorrect'.toString()"
+              style="background-color: red; color: white">
+              {{testCorrectOrNot(resultQuestions.answersList[j].correction)}}
+            </div>
+
+            <div class="collapsible-header"
+              *ngIf="resultQuestions.answersList[j].correction.toString()=='incomplete'.toString()"
+              style="background-color:orange; color: white">
+              votre réponse est incomplète
+            </div>
+
+          </li>
+        </ul>
+
+
+        <!-- fin de list de questionss -->
+        <button data-target="stat" class="btn modal-trigger btn-success">
+          <i class="material-icons">call_missed_outgoing</i>
+          statistique de la classe</button>&nbsp;
+              <button  [routerLink]="[ '/exam-list-student' ]" class="btn blue" *ngIf="this.userService.isStudent()">
+                <i class="material-icons">format_list_numbered</i> liste des examens</button>
+                <button  [routerLink]="[ '/SubmissionOfStudentComponent' ]" class="btn blue" *ngIf="this.userService.isProfessor()">
+                  <i class="material-icons">format_list_numbered</i> liste des soumissions</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="stat" class="modal">
+  <app-pie-chart></app-pie-chart>
+</div>

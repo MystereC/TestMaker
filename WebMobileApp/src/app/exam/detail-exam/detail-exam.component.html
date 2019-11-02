@@ -1,0 +1,89 @@
+<div class="panel panel-default">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content black-text">
+                <div class="center-align">
+                  <h4>Détail de l'examen <i class="material-icons">format_list_numbered</i></h4>
+                </div>
+                <hr />
+                <h4 class="center-align">{{exam.title}}</h4>
+                <p *ngIf="!exam.comment; then thenTemplate; else elseTemplate"></p>
+                <ng-template #thenTemplate>
+                  <b>Pas de description</b>
+                </ng-template>
+                <ng-template #elseTemplate>
+                  Description: {{exam.comment}}
+                </ng-template>
+                <p>Date de création : {{exam.dateCreation | date: 'fullDate': undefined : 'fr'}}</p>
+                <p>Classe attribuée : <b> {{exam.class.title}}</b></p>
+
+                <ul class="collection">
+                  <li class="collection-item " *ngFor="let quiz of exam.listQuiz; let i=index">
+
+                    <p class="center-align"> <span class="title">
+                        <b>&Eacute;preuve: </b>{{quiz.title}}
+                      </span>
+                      <!-- <span class="new badge blue" data-badge-caption="questions">{{quiz.listQuestion.length}}</span>-->
+                    </p>
+                    <ul class="collection">
+                      <li class="collection-item" *ngFor="let quest of quiz.listQuestion; let j=index">
+                        <p><b>Question {{j+1}}: </b>{{quest.formuler}}
+                          <!--  <span class="new badge orange" data-badge-caption="choix">{{quest.listProposition.length}}</span>-->
+                        </p>
+
+                        <hr>
+                        <div class="row">
+                          <div class="col s12" *ngFor="let prop of quest.listProposition; let k=index">
+                            <p>
+                              <ng-container *ngIf="prop.isTrue==true; then thenTemplate; else elseTemplate">
+                              </ng-container>
+                              <ng-template #thenTemplate>
+                                <b>Choix {{k+1}}: </b>{{prop.choice}} <i>(réponse correcte avec {{prop.point}}
+                                  point)</i>
+                              </ng-template>
+                              <ng-template #elseTemplate>
+                                <b>Choix {{k+1}}: </b>{{prop.choice}}
+                              </ng-template>
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="card-action2">
+
+                  <div class="col s4 m4 l4">
+                    <p><a class="btn orange modal-trigger pull left" href="#preview">
+                        Aperçu
+                      </a></p>
+                  </div>
+                  
+                  <div class="col s4 m4 l4">
+                    <p><button class="btn red pull right" (click)="returnHome()">
+                        Retour
+                      </button></p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<!-- Modal start -->
+<div class="modal" id="preview">
+  <app-preview-exam></app-preview-exam>
+</div>
+<!-- Modal end -->

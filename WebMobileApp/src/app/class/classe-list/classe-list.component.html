@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="row">
+  <div id="global" class="col s12 m12 l12">
+    <br />
+    <h6 id="cardPanel">
+      MES CLASSES CREEES <i class="material-icons">group</i></h6>
+    <table id="table" style="margin-left: auto" class="highlight">
+      <thead class="head-row">
+        <tr>
+          <th>Nom de la classe</th>
+          <th>Université</th>
+          <th>Nombre d'étudiants</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody class="sort-data-set " *ngFor="let item of myclasses">
+        <tr class="single-hover-row">
+          <td data-label="Nom de la classe : ">{{item.title}}</td>
+          <td data-label="Université : ">{{item.university}}</td>
+          <td data-label="Nombre d'étudiants : ">{{item.arrayOfStudents.length}} incrit(s)</td>
+          <td id="button">
+            <a style="margin-top:2px; margin-bottom:3px" class="btn " (click)="showStudents(item)">Liste des etudiants </a> &nbsp;
+            <a style="margin-top:2px; margin-bottom:3px" class="btn blue" (click)="showExams(item)">Liste des Examens </a></td>
+
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+

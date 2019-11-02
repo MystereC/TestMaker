@@ -1,0 +1,59 @@
+<div class="modal-content">
+
+  <div class="sm-jumbotron center-align">
+    <h4>Cr&eacute;ation de sondage </h4>
+  </div>
+  <br>
+  <form [formGroup]="myForm">
+    <fieldset class="field_rad">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">rate_review</i>
+          <input type="text" id="formuler" class="validate" formControlName="formuler" required>
+          <label for="formuler">Question</label>
+        </div>
+
+        <div class="input-field col s12">
+          <i class="material-icons prefix">comment</i>
+          <textarea id="description" class="materialize-textarea" formControlName="description"></textarea>
+          <label for="description">Description</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <div formArrayName="options">
+      <div *ngFor="let item of myForm.get('options').controls; let i=index">
+        <fieldset class="field_rad">
+          <legend>
+            <h5>Option {{i+1}} </h5>
+          </legend>
+          <div [formGroupName]="i">
+            <div class="row">
+              <div class="col s12 m6 l8">
+                <input style="margin-left: 40px;" type="text" placeholder="votre option" id="choice" class="validate"
+                  formControlName="choice" required>
+
+              </div>
+              <div class="col s12 m6 l2">
+                <button class="btn-floating blue pull right" (click)="addNewOption()"><i
+                    class="material-icons prefix">add_box</i></button>
+              </div>
+              <div class="col s12 m6 l2">
+                <button class="btn-floating red pull left" *ngIf="myForm.controls.options.length > 1"
+                  (click)="deleteOption(i)">
+                  <i class="material-icons prefix">delete_forever</i></button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+    </div>
+
+  </form>
+</div>
+
+<div class="sm-jumbotron2 center-align">
+  <button (click)="save()" class="btn modal-close" [disabled]="myForm.invalid">Cr&eacute;er
+  </button>
+</div>

@@ -1,0 +1,52 @@
+<nav class="blue">
+  <div class="nav-wrapper">
+      <li routerLinkActive="active" class="brand-logo"  *ngIf="this.userService.isStudent()" ><a [routerLink]="[ '/home-student' ]"> QuizMaker</a></li>
+      <li routerLinkActive="active" class="brand-logo"  *ngIf="this.userService.isProfessor()" ><a [routerLink]="[ '/home' ]"> QuizMaker</a></li>
+
+    <a routerLink="#" class="sidenav-trigger" data-target="mobile-button"><i class="material-icons">menu</i></a>
+
+    <ul class="right hide-on-med-and-down">
+      <li routerLinkActive="active" *ngIf="this.userService.isProfessor()"><a [routerLink]="[ '/home' ]">Accueil </a></li>
+      <li routerLinkActive="active" *ngIf="this.userService.isStudent()" ><a [routerLink]="[ '/home-student' ]">Accueil </a></li>
+      <li routerLinkActive="active"><a [routerLink]="[ '/profile' ]">Profil </a></li>
+      <li (click)="onLogout()" value="Logout"> <a>Déconnexion</a></li>
+    </ul>
+
+    <ul class="sidenav" id="mobile-button">
+        <li>
+            <div class="user-view">
+              <div style="background-color: rgb(8, 79, 112)" class="background">
+              </div>
+              <li *ngIf="this.userService.isProfessor()"><img class="circle" src="assets/img/faces/teacher.png"></li>
+              <li *ngIf="this.userService.isStudent()"><img class="circle" src="assets/img/faces/student.png"></li>
+              <li><span class="white-text name">Bonjour {{user.firstname}} {{user.lastName}}</span></li>
+              <li><span class="white-text email">{{user.email}}</span></li>
+            </div>
+          </li>
+
+       <!--Partie Professeur-->
+      <li routerLinkActive="active" *ngIf="this.userService.isProfessor()"><a class ="sidenav-close" [routerLink]="[ '/home' ]"><i class="material-icons">home</i> Accueil </a></li>     
+      <li routerLinkActive="active" *ngIf="this.userService.isProfessor()"><a class ="sidenav-close" [routerLink]="[ '/profile' ]"><i class="material-icons">person</i> Profil </a></li>
+      <li *ngIf="this.userService.isProfessor()"><div class="divider"></div></li>
+      <li routerLinkActive="active" *ngIf="this.userService.isProfessor()"><a class ="sidenav-close" [routerLink]="[ '/classe-list' ]"><i class="small material-icons">group</i>Liste classes créées </a></li>
+      <li routerLinkActive="active" *ngIf="this.userService.isProfessor()"><a class ="sidenav-close" [routerLink]="[ '/exam-list' ]"><i class="small material-icons">format_list_numbered</i>Liste examens créées </a></li>
+      <li routerLinkActive="active" *ngIf="this.userService.isProfessor()"><a class ="sidenav-close" [routerLink]="[ '/sondage-list' ]"><i class="small material-icons">insert_chart</i>Liste sondages créés </a></li>
+      <!--Partie Student-->
+      <li routerLinkActive="active" *ngIf="this.userService.isStudent()"><a class ="sidenav-close" [routerLink]="[ '/home-student' ]"><i class="material-icons">home</i> Accueil </a></li>
+      <li routerLinkActive="active" *ngIf="this.userService.isStudent()"><a class ="sidenav-close" [routerLink]="[ '/profile' ]"><i class="material-icons">person</i> Profil </a></li>
+      <li *ngIf="this.userService.isStudent()"><div class="divider"></div></li>
+      <li routerLinkActive="active" *ngIf="this.userService.isStudent()"><a class ="sidenav-close" [routerLink]="[ '/classe-list-student' ]"><i class="small material-icons">group</i>Liste classes inscrites </a></li>
+      <li routerLinkActive="active" *ngIf="this.userService.isStudent()"><a class ="sidenav-close" [routerLink]="[ '/exam-list-student' ]"> <i class="small material-icons">edit</i>Liste examens inscrits </a></li>
+      <li routerLinkActive="active" *ngIf="this.userService.isStudent()"><a class ="sidenav-close" [routerLink]="[ '/sondage-list-student' ]"><i class="small material-icons">move_to_inbox</i>Liste sondages créés </a></li>
+
+      <li><div class="divider"></div></li>     
+      
+      <li (click)="onLogout()" value="Logout"><a class="sidenav-close"><i class="material-icons">power_settings_new</i>Déconnexion</a></li>
+      <li><a id="bottom"><i class="small material-icons">copyright</i> Projet Long UPEC </a></li>
+    </ul>
+
+    <!-- modal -->
+    <div class="modal" id="quiz">
+      <app-quiz-program></app-quiz-program>
+    </div>
+    <!-- end modal -->

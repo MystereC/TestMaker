@@ -1,0 +1,77 @@
+<div class="panel panel-default">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content black-text">
+                <div class="center-align">
+                  <h4>Détail du questionnaire <i class="material-icons">format_list_numbered</i></h4>
+                </div>
+                <hr>
+                <h4 class="center-align"> {{quiz.title}}</h4>
+                <p *ngIf="!quiz.description; then thenTemplate; else elseTemplate"></p>
+                <ng-template #thenTemplate>
+                  <b>Pas de description</b>
+                </ng-template>
+                <ng-template #elseTemplate>
+                  Description: {{quiz.description}}
+                </ng-template>
+                <p>Le questionaire a été créé le {{quiz.dateCreation | date :'fullDate' : undefined : 'fr'}}</p>
+
+                <ul class="collection with-header">
+                    <li class="collection-header" *ngFor="let quest of quiz.listQuestion; let i = index">
+                      <h5><b>Question {{i+1}}:</b> {{quest.formuler}} </h5>
+                      <hr />
+                      <div class="row">
+                          <div class="col s12" *ngFor="let prop of quest.listProposition; let j = index">
+                            <p><ng-container *ngIf="prop.isTrue==true; then thenTemplate; else elseTemplate"></ng-container>
+                            <ng-template #thenTemplate>
+                                <b>Choix {{j+1}}:</b> {{prop.choice}} <i>(réponse correcte avec {{prop.point}} point)</i>
+                            </ng-template>
+                            <ng-template #elseTemplate>
+                                <b>Choix {{j+1}}:</b> {{prop.choice}} 
+                            </ng-template>               
+                            </p>
+                          </div>
+                        </div>
+                    </li>
+                  </ul>
+
+              </div>
+
+              <div class="card-action2">
+                  
+                  <div class="col s4 m4 l4">
+                    <p><a class="btn orange modal-trigger pull left" href="#preview">
+                        Aperçu
+                    </a></p>
+                  </div>
+                  <div class="col s4 m4 l4 center-align">
+                    <p><button class="btn blue" (click)="goToModify()">
+                        Modifier
+                      </button></p>
+                  </div>
+                  <div class="col s4 m4 l4">
+                    <p><button class="btn red pull right" (click)="returnHome()">
+                        Retour
+                      </button></p>
+                  </div>
+  
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<!-- Modal start -->
+<div class="modal" id="preview">
+    <app-preview-quiz></app-preview-quiz>
+</div>
+<!-- Modal end -->

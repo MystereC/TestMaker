@@ -1,0 +1,28 @@
+<div class="z-depth-3">
+    <div>
+        <h5 class="center-align">Classe </h5>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div class="row" class="col s12">
+            <div class="input-field">
+                <i class="material-icons prefix">loupe</i>
+                <input id="choice" type="text" class="form-control" formControlName="title" [(ngModel)]="newClasse.title">
+                <label for="choice">Nom de la Classe</label>
+            </div>
+        </div>
+        <div class="row" class="col s12">
+            <div class="input-field">
+                <i class="material-icons prefix">loupe</i>
+                <input id="choice" type="text" class="form-control" formControlName="description" [(ngModel)]="newClasse.descrition">
+                <label for="choice">description</label>
+            </div>
+        </div>
+        <div class="row" class="sm-jumbotron2 center-align">
+            <!-- id="toHide" [hidden]="!isHide"-->
+            <button class="waves-effect waves-light btn" type="submit" [disabled]="form.invalid">Ajouter
+            </button>
+        </div>
+        <br>
+    </form>
+</div>

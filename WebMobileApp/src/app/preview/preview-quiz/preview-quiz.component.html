@@ -1,0 +1,50 @@
+<div id="to_pdf" >
+<!--<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content black-text" >-->
+              <div class="center-align">
+                <img src="assets/img/upec.png" width="50" height="50"/>
+                <h4>{{quiz.title}}</h4>
+                <i> <!--{{dateNow | date: 'EEEE, d MMMM y'}}--> {{dateNow | date: 'fullDate': undefined : 'fr'}}</i>
+              </div>
+         
+              <p *ngIf="!quiz.description; then thenTemplate; else elseTemplate"></p>
+                <ng-template #thenTemplate>
+                 
+                </ng-template>
+                <ng-template #elseTemplate>
+                  <p class="center-align">Description: {{quiz.description}}</p>
+                </ng-template>
+
+                <ul class="collection with-header" >
+                    <li class="mine collection-header" *ngFor="let quest of quiz.listQuestion; let i = index">
+                      <h5><b>Question {{i+1}}:</b> {{quest.formuler}} </h5>
+                      <hr />
+                      <div class="row">
+                          <div class="col s12" *ngFor="let prop of quest.listProposition; let j = index">
+                            <p>
+                                <label for="reponse">
+                                    <input type="checkbox" id="reponse" onclick="return false;"/>
+                                    <span>{{prop.choice}}</span>
+                                  </label>              
+                            </p>
+                          </div>
+                        </div>
+                    </li>
+                  </ul> 
+            <!--</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+</div>
+<div class="pdf center-align">
+  <button class="btn orange modal-action modal-close" (click)="generatePdf()">Générer en PDF</button>
+</div><br>

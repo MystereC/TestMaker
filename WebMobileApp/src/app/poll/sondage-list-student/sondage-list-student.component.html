@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<div class="row">
+  <div id="global" class="col s12 m12 l12">
+    <br />
+    <h6 id="cardPanel">
+      MES SONDAGES INSCRITS <i class="material-icons">move_to_inbox</i></h6>
+    <table id="table" style="margin-left: auto" class="highlight">
+      <thead class="head-row">
+        <tr>
+          <th>Question du sondage</th>
+          <th>Date</th>
+          <th>Commentaire</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody class="sort-data-set" *ngFor="let class of myclasses">
+        <tr class="single-hover-row" *ngFor="let item of class.arrayOfPolls">
+          <td data-label="Question du sondage : ">{{item.question}}</td>
+          <td data-label="Date : ">{{item.dateCreation | date :'fullDate' : undefined : 'fr'}}</td>
+          <td data-label="Commentaire : ">{{item.description}}</td>
+          <td id="button"><a class="waves-effect btn" (click)="onSelectPoll(item)">Répondre</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<div class="row">
+  <div id="global" class="col s12 m12 l12">
+    <br />
+    <h6 id="cardPanel">
+      MES EXAMENS CREES <i class="material-icons">group</i></h6>
+    <table id="table" style="margin-left: auto" class="highlight">
+      <thead class="head-row">
+        <tr>
+          <th>Nom de l'examen</th>
+          <th>Date</th>
+          <th>Commentaire</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody class="sort-data-set" *ngFor="let item of myExams">
+        <tr class="single-hover-row">
+          <td data-label="Nom de l'examen : ">{{item.title}}</td>
+          <td data-label="Date : ">{{item.dateCreation | date :'fullDate' : undefined : 'fr'}}</td>
+          <td data-label="Description : ">{{item.comment}}</td>
+          <td id="button"><a class="waves-effect btn" (click)="showSubmission(item)">Voir Soumissions</a></td>
+        </tr> 
+      </tbody>
+    </table>
+  </div>
+</div>
+

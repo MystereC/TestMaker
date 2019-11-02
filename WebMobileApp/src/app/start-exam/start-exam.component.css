@@ -1,0 +1,16 @@
+#cardContent{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.page-footer {
+    padding-top: 20px;
+    color: white;
+    background-color: rgb(59, 163, 153);
+    position: absolute;
+    top: 550px;
+    width: 100%; 
+}

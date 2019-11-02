@@ -1,0 +1,4 @@
+#Tue Mar 05 21:41:00 CET 2019
+base.0=C\:\\Users\\Tony\\Desktop\\Info\\TonyProjet\\projet_long\\WebMobileApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,5680 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>mean-stack 1.0.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet' />
+  <link href='assets/style.css' rel='stylesheet' />
+  <link href='assets/github.css' rel='stylesheet' />
+  <link href='assets/split.css' rel='stylesheet' />
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>mean-stack</h3>
+          <div class='mb1'><code>1.0.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#createclass'
+                  class="">
+                  CreateClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#findclassesbyprofessorid'
+                  class="">
+                  findClassesByProfessorId
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getallclasses'
+                  class="">
+                  getAllClasses
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#subscribeinclass'
+                  class="">
+                  subscribeInClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#unsubscribeinclass'
+                  class="">
+                  unsubscribeInClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetprofessor'
+                  class="">
+                  promiseToGetProfessor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetogetprofessor'
+                  class="">
+                  callPromiseToGetProfessor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetstudent'
+                  class="">
+                  promiseToGetStudent
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetstudent'
+                  class="">
+                  promiseToGetStudent
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetstudent'
+                  class="">
+                  callMyPromiseToGetStudent
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetexam'
+                  class="">
+                  promiseToGetExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetexam'
+                  class="">
+                  promiseToGetExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetexam'
+                  class="">
+                  promiseToGetExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetexam'
+                  class="">
+                  promiseToGetExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetexam'
+                  class="">
+                  callMyPromiseToGetExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetexam'
+                  class="">
+                  callMyPromiseToGetExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetexam'
+                  class="">
+                  callMyPromiseToGetExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createexam'
+                  class="">
+                  CreateExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#findbyexamid'
+                  class="">
+                  findByExamId
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getallexam'
+                  class="">
+                  getAllExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getexamsofclass'
+                  class="">
+                  getExamsOfClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#deleteexam'
+                  class="">
+                  deleteExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetogetquiz'
+                  class="">
+                  callPromiseToGetQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetogetquiz'
+                  class="">
+                  callPromiseToGetQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetogetquiz'
+                  class="">
+                  callPromiseToGetQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetogetquiz'
+                  class="">
+                  callPromiseToGetQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetoupdatearrayofsubmissionsofstudent'
+                  class="">
+                  promiseToUpdateArrayOfSubmissionsOfStudent
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetodeletesubmission'
+                  class="">
+                  promiseToDeleteSubmission
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetodeletesubmission'
+                  class="">
+                  callPromiseToDeleteSubmission
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetquiz'
+                  class="">
+                  promiseToGetQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetquiz'
+                  class="">
+                  promiseToGetQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetquiz'
+                  class="">
+                  promiseToGetQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetquestion'
+                  class="">
+                  promiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetquestion'
+                  class="">
+                  promiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetquestion'
+                  class="">
+                  promiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetquestion'
+                  class="">
+                  promiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetquestion'
+                  class="">
+                  promiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetquestion'
+                  class="">
+                  callMyPromiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetquestion'
+                  class="">
+                  callMyPromiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetquestion'
+                  class="">
+                  callMyPromiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetquestion'
+                  class="">
+                  callMyPromiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetquestion'
+                  class="">
+                  callMyPromiseToGetQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createpoll'
+                  class="">
+                  CreatePoll
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#findbyuserid'
+                  class="">
+                  findByUserId
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#pollvote'
+                  class="">
+                  pollVote
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetclass'
+                  class="">
+                  promiseToGetClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetclass'
+                  class="">
+                  promiseToGetClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetogetclass'
+                  class="">
+                  callPromiseToGetClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetogetclass'
+                  class="">
+                  callPromiseToGetClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createquestion'
+                  class="">
+                  CreateQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createquiz'
+                  class="">
+                  CreateQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#findbyuserid'
+                  class="">
+                  findByUserId
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatequiz'
+                  class="">
+                  UpdateQuiz
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetoupdatequestion'
+                  class="">
+                  promiseToUpdateQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetoupdatequestion'
+                  class="">
+                  callMyPromiseToUpdateQuestion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createsubmission'
+                  class="">
+                  CreateSubmission
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getsubmissionbyid'
+                  class="">
+                  getSubmissionById
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getsubmissionbyexam'
+                  class="">
+                  getSubmissionByExam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#verifyallanswerarecorrect'
+                  class="">
+                  verifyAllAnswerAreCorrect
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#verifyallanswerarenotcorrect'
+                  class="">
+                  verifyAllAnswerAreNotCorrect
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#calculscore'
+                  class="">
+                  calculScore
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#calculnumberspoint'
+                  class="">
+                  calculNumbersPoint
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetexamandstudent'
+                  class="">
+                  callMyPromiseToGetExamAndStudent
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#register'
+                  class="">
+                  register
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#authenticate'
+                  class="">
+                  authenticate
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#userprofile'
+                  class="">
+                  userProfile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getclassesregisterd'
+                  class="">
+                  getClassesRegisterd
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getsubmissions'
+                  class="">
+                  getSubmissions
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetpoll'
+                  class="">
+                  promiseToGetPoll
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callmypromisetogetexamandpoll'
+                  class="">
+                  callMyPromiseToGetExamAndPoll
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#callpromisetogetsubmission'
+                  class="">
+                  callPromiseToGetSubmission
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#promisetogetsubmission'
+                  class="">
+                  promiseToGetSubmission
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createclass'>
+      CreateClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>post a Class in database.</p>
+
+    <div class='pre p1 fill-light mt0'>CreateClass(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='findclassesbyprofessorid'>
+      findClassesByProfessorId
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>get all the classes of a professor</p>
+
+    <div class='pre p1 fill-light mt0'>findClassesByProfessorId(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getallclasses'>
+      getAllClasses
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>get all the classes in database</p>
+
+    <div class='pre p1 fill-light mt0'>getAllClasses(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='subscribeinclass'>
+      subscribeInClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>subscribe an student to an classe</p>
+
+    <div class='pre p1 fill-light mt0'>subscribeInClass(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='unsubscribeinclass'>
+      unsubscribeInClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>remove student from a class</p>
+
+    <div class='pre p1 fill-light mt0'>unsubscribeInClass(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetprofessor'>
+      promiseToGetProfessor
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole professor from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetProfessor(profId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>profId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of the professor.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object user or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetogetprofessor'>
+      callPromiseToGetProfessor
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get professor for each class from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToGetProfessor(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></code>:
+        array of Class
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetstudent'>
+      promiseToGetStudent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole student from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetStudent(studentId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>studentId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of the student.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object user or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetstudent'>
+      promiseToGetStudent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to Update User in database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetStudent(studentId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>studentId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of student.
+*@param {string} studentId - the _id of submission.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object user or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetstudent'>
+      callMyPromiseToGetStudent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all students for each class from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetStudent(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></code>:
+        array of Class
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetexam'>
+      promiseToGetExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole exam from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetExam(ExamId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ExamId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of exam.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Exam or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetexam'>
+      promiseToGetExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole exam from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetExam(ExamId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ExamId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of exam.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Exam or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetexam'>
+      promiseToGetExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole exam from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetExam(ExamId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ExamId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of exam.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Exam or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetexam'>
+      promiseToGetExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole exam from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetExam(ExamId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ExamId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of exam.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Exam or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetexam'>
+      callMyPromiseToGetExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all exams from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetExam(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></code>:
+        array of Class
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetexam'>
+      callMyPromiseToGetExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the exam from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetExam(): Submission</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Submission</code>:
+        the exam
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetexam'>
+      callMyPromiseToGetExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the exam from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetExam(): Submission</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Submission</code>:
+        the exam
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createexam'>
+      CreateExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>post an Exam in database.</p>
+
+    <div class='pre p1 fill-light mt0'>CreateExam(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='findbyexamid'>
+      findByExamId
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns a exam by the id for this user.</p>
+
+    <div class='pre p1 fill-light mt0'>findByExamId(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getallexam'>
+      getAllExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>list of all the exams created by  user.</p>
+
+    <div class='pre p1 fill-light mt0'>getAllExam(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getexamsofclass'>
+      getExamsOfClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>get list of all the exams of a class and created by  user.</p>
+
+    <div class='pre p1 fill-light mt0'>getExamsOfClass(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='deleteexam'>
+      deleteExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>List all the submissions of a student.</p>
+
+    <div class='pre p1 fill-light mt0'>deleteExam(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetogetquiz'>
+      callPromiseToGetQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all quiz from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToGetQuiz(): Exam</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Exam</code>:
+        the exam
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetogetquiz'>
+      callPromiseToGetQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all quiz for each exam from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToGetQuiz(exams: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Exam></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>exams</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Exam></code>:
+        the exam
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetogetquiz'>
+      callPromiseToGetQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all quiz from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToGetQuiz(): Exam</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Exam</code>:
+        the exam
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetogetquiz'>
+      callPromiseToGetQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all quiz from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToGetQuiz(): Exam</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Exam</code>:
+        the exam
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetoupdatearrayofsubmissionsofstudent'>
+      promiseToUpdateArrayOfSubmissionsOfStudent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to Update User in database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToUpdateArrayOfSubmissionsOfStudent(studentId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, submissionId: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>studentId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of student.
+*@param {string} studentId - the _id of submission.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>submissionId</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object user or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetodeletesubmission'>
+      promiseToDeleteSubmission
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to delete submission from database in synchronous mode
+*@param {string} studentId - the _id of submission.</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToDeleteSubmission(submissionId: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>submissionId</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object submission deleted or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetodeletesubmission'>
+      callPromiseToDeleteSubmission
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to delete submission and update user from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToDeleteSubmission(): Submission</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Submission</code>:
+        the last submission deleted
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetquiz'>
+      promiseToGetQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole quiz from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetQuiz(quizId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>quizId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of quiz.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Quiz or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetquiz'>
+      promiseToGetQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole quiz from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetQuiz(quizId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>quizId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of quiz.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Quiz or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetquiz'>
+      promiseToGetQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole quiz from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetQuiz(quizId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>quizId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of quiz.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Quiz or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetquestion'>
+      promiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetQuestion(questionId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>questionId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of question.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Question or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetquestion'>
+      promiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetQuestion(questionId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>questionId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of question.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Question or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetquestion'>
+      promiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetQuestion(questionId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>questionId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of question.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Question or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetquestion'>
+      promiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetQuestion(questionId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>questionId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of question.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Question or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetquestion'>
+      promiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetQuestion(questionId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>questionId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of question.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Question or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetquestion'>
+      callMyPromiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetQuestion(): Quiz</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Quiz</code>:
+        the quiz
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetquestion'>
+      callMyPromiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetQuestion(): Quiz</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Quiz</code>:
+        the quiz
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetquestion'>
+      callMyPromiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetQuestion(): Submission</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Submission</code>:
+        the submission
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetquestion'>
+      callMyPromiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetQuestion(): Quiz</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Quiz</code>:
+        the quiz
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetquestion'>
+      callMyPromiseToGetQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all question from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetQuestion(): Quiz</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Quiz</code>:
+        the quiz
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createpoll'>
+      CreatePoll
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>post a poll in database.</p>
+
+    <div class='pre p1 fill-light mt0'>CreatePoll(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='findbyuserid'>
+      findByUserId
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>get all polls by  professor.</p>
+
+    <div class='pre p1 fill-light mt0'>findByUserId(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pollvote'>
+      pollVote
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>vote for a poll.</p>
+
+    <div class='pre p1 fill-light mt0'>pollVote(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetclass'>
+      promiseToGetClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole class from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetClass(classId: any, ClassId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>classId</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ClassId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of the class.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Class or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetclass'>
+      promiseToGetClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole class from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetClass(ClassId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ClassId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of the class.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Class or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetogetclass'>
+      callPromiseToGetClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get class for each poll from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToGetClass(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Poll></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Poll></code>:
+        the polls
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetogetclass'>
+      callPromiseToGetClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all classes from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToGetClass(): User</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>User</code>:
+        the user
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createquestion'>
+      CreateQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>post a question in database.</p>
+
+    <div class='pre p1 fill-light mt0'>CreateQuestion(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createquiz'>
+      CreateQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>post a quiz in database.</p>
+
+    <div class='pre p1 fill-light mt0'>CreateQuiz(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='findbyuserid'>
+      findByUserId
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>get all quizes by  professor.</p>
+
+    <div class='pre p1 fill-light mt0'>findByUserId(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatequiz'>
+      UpdateQuiz
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>edit a quiz.</p>
+
+    <div class='pre p1 fill-light mt0'>UpdateQuiz(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetoupdatequestion'>
+      promiseToUpdateQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to update  question in database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToUpdateQuestion(newQuestion: Question): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>newQuestion</span> <code class='quiet'>(Question)</code>
+	    the _id of question.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Question or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetoupdatequestion'>
+      callMyPromiseToUpdateQuestion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to call promiseToUpdateQuestion() and update in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToUpdateQuestion(): Question</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Question</code>:
+        the question
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createsubmission'>
+      CreateSubmission
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>post an submission in database.</p>
+
+    <div class='pre p1 fill-light mt0'>CreateSubmission(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getsubmissionbyid'>
+      getSubmissionById
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>get a submission by  id.</p>
+
+    <div class='pre p1 fill-light mt0'>getSubmissionById(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getsubmissionbyexam'>
+      getSubmissionByExam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>get a submission by given exam id</p>
+
+    <div class='pre p1 fill-light mt0'>getSubmissionByExam(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='verifyallanswerarecorrect'>
+      verifyAllAnswerAreCorrect
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to verify if all answers are correct</p>
+
+    <div class='pre p1 fill-light mt0'>verifyAllAnswerAreCorrect(question: Question, answers: Answer): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>question</span> <code class='quiet'>(Question)</code>
+	    array of question.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>answers</span> <code class='quiet'>(Answer)</code>
+	    array of answer.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+         true if all answers are correct else false
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='verifyallanswerarenotcorrect'>
+      verifyAllAnswerAreNotCorrect
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to verify if all answers are not correct</p>
+
+    <div class='pre p1 fill-light mt0'>verifyAllAnswerAreNotCorrect(question: Question, answers: Answer): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>question</span> <code class='quiet'>(Question)</code>
+	    array of question.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>answers</span> <code class='quiet'>(Answer)</code>
+	    array of answer.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+         true if all answers are  not correct else false
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='calculscore'>
+      calculScore
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to calcul scroe for  a question</p>
+
+    <div class='pre p1 fill-light mt0'>calculScore(question: Question, answers: Answer): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>question</span> <code class='quiet'>(Question)</code>
+	    array of question.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>answers</span> <code class='quiet'>(Answer)</code>
+	    array of answer.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+         sum of point for correct answers
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='calculnumberspoint'>
+      calculNumbersPoint
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to calcul all point of a question</p>
+
+    <div class='pre p1 fill-light mt0'>calculNumbersPoint(question: Question): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>question</span> <code class='quiet'>(Question)</code>
+	    array of question.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+         sum of point for correct answers
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetexamandstudent'>
+      callMyPromiseToGetExamAndStudent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get exam ans student from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetExamAndStudent(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Submission></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Submission></code>:
+        the array of submission
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='register'>
+      register
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>register an user in database.</p>
+
+    <div class='pre p1 fill-light mt0'>register(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='authenticate'>
+      authenticate
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>authenticate to access and get token</p>
+
+    <div class='pre p1 fill-light mt0'>authenticate(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='userprofile'>
+      userProfile
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>get the user's profile .</p>
+
+    <div class='pre p1 fill-light mt0'>userProfile(req: any, res: any, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    a function to execute after this
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getclassesregisterd'>
+      getClassesRegisterd
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>List all the classes of a student.</p>
+
+    <div class='pre p1 fill-light mt0'>getClassesRegisterd(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getsubmissions'>
+      getSubmissions
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>List all the submissions of a student.</p>
+
+    <div class='pre p1 fill-light mt0'>getSubmissions(req: any, res: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>req</span> <code class='quiet'>(any)</code>
+	    an object containing information about the HTTP request.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>res</span> <code class='quiet'>(any)</code>
+	    an object containing information about theHTTP response.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetpoll'>
+      promiseToGetPoll
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole poll from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetPoll(PollId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PollId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of poll.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object Poll or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callmypromisetogetexamandpoll'>
+      callMyPromiseToGetExamAndPoll
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all polls and exams from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callMyPromiseToGetExamAndPoll(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></code>:
+        array of Class
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='callpromisetogetsubmission'>
+      callPromiseToGetSubmission
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get all submissions from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>callPromiseToGetSubmission(): User</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>User</code>:
+        the user
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='promisetogetsubmission'>
+      promiseToGetSubmission
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a function to get the whole submission from database in synchronous mode</p>
+
+    <div class='pre p1 fill-light mt0'>promiseToGetSubmission(submissionsId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>submissionsId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the _id of submission.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promise object represents the object submission or the error
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

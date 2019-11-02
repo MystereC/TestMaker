@@ -1,0 +1,177 @@
+<app-navbar></app-navbar>
+
+
+<div class="fixed-action-btn hide-on-large-only">
+  <a class="btn-floating btn-large red">
+    <i class="material-icons">add</i>
+  </a>
+  <ul>
+      <li><a class="btn-floating blue darken-1 modal-trigger" href="#classe-program">Class</a></li>
+      <li><a class="btn-floating green modal-trigger" href="#exam-create">Exam</a></li>
+      <li><a class="btn-floating blue modal-trigger" href="#quiz-program">Quiz</a></li>
+      <li><a class="btn-floating green darken-1 modal-trigger" href="#poll-create">Poll</a></li>
+  </ul>
+</div>
+
+<div class="row">
+
+  <div class="col s12 m12 l9">
+    <br />
+
+    <h6 id="cardPanel">
+      MES DERNIERES CLASSES CREEES<i class="material-icons">people</i></h6>
+
+    <div class="collection with-header s12 m8 l12" *ngFor="let item of myclasses">
+
+      <a class="collection-item">
+        <div><i class="material-icons">archive</i> {{item.title}}
+          <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a></div>
+      </a>
+    </div>
+    <br>
+    <a  [routerLink]="[ '/classe-list' ]" class="waves-effect waves-light btn-small">toutes mes classes</a>
+
+     <h6 id="cardPanel" class="s12 m12 l6">
+      MES DERNIERS EXAMENS CREES<i class="material-icons">school</i></h6>
+
+    <div class="collection with-header s12 m12 l12" *ngFor="let item of myExams">
+
+      <a class="collection-item" (click)="onChoose(item)">
+        <i class="material-icons">archive</i> {{item.title}} 
+        <a class="secondary-content"><i class="material-icons">visibility</i></a>
+      </a>
+    </div>
+    
+    <br>
+    <a [routerLink]="[ '/exam-list' ]" class="waves-effect waves-light btn-small">tous mes
+      examens</a>
+
+    <h6 id="cardPanel" class="s12 m12 l6">
+      MES DERNIERS QUESTIONNAIRES CREES<i class="material-icons">school</i></h6>
+
+    <div class="collection with-header s12 m12 l12" *ngFor="let item of myquizes">
+
+      <a class="collection-item" (click)="onSelect(item)">
+        <i class="material-icons">archive</i> {{item.title}} <a class="secondary-content"><i
+              class="material-icons">visibility</i></a>
+      </a>
+    </div>
+    <!--<a class="waves-effect waves-light btn-small" [routerLink]="[ '/sondage-list' ]">tous mes questionnaires</a>-->
+
+    <h6 id="cardPanel" class="s12 m12 l6">
+      MES DERNIERS SONDAGES CREES<i class="material-icons">insert_chart</i></h6>
+
+    <div class="collection with-header s12 m12 l12" *ngFor="let item of myPolls">
+
+      <a class="collection-item modal-trigger" href="#list-of-poll" (click)="onSelectPoll(item)">
+        <div><i class="material-icons">archive</i> {{item.question}} <a class="secondary-content"><i
+              class="material-icons">visibility</i></a></div>
+      </a>
+    </div>
+    <br>
+    <a class="waves-effect waves-light btn-small" [routerLink]="[ '/sondage-list' ]">tous mes sondages</a>
+
+  </div>
+
+  <div id="cardPanelAll" class="row">
+    <div class="hide-on-med-and-down">
+      <br />
+      <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+        <br /><br />
+        <a id="cardPanelIcon" [routerLink]="[ '/profile' ]">Voir Profil <br /> <i
+            class="small material-icons">person</i></a>
+      </div>
+      <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+        <br /><br />
+        <a id="cardPanelIcon" href="#classe-program" class="modal-trigger">Créer une classe <br /> <i
+            class="small material-icons">add_circle</i></a>
+      </div>
+      <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+        <br /><br />
+        <a id="cardPanelIcon" href="#quiz-program" class="modal-trigger">Créer un questionnaire <br /> <i
+            class="small material-icons">add_circle</i></a>
+      </div>
+
+      <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+        <br /><br />
+        <a id="cardPanelIcon" href="#exam-create" class="modal-trigger">Créer un examen <br /> <i
+            class="small material-icons">add_circle</i></a>
+      </div>
+
+      <div style="width:150px ;height: 150px" class="center-align card-panel teal lighten-2 col">
+        <br /><br />
+        <a id="cardPanelIcon" href="#poll-create" class="modal-trigger"> Créer un sondage <br /> <i
+            class="small material-icons">add_circle</i></a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
+
+
+<!-- modal -->
+<div class="modal" id="classe-program">
+  <app-classe-program></app-classe-program>
+</div>
+<!-- end modal -->
+
+<!-- modal -->
+<div class="modal" id="quiz-program">
+  <app-quiz-program></app-quiz-program>
+</div>
+<!-- end modal -->
+
+<!-- modal -->
+<div class="modal" id="exam-create">
+  <app-exam-create></app-exam-create>
+</div>
+<!-- end modal -->
+
+<!-- modal -->
+<div class="modal" id="poll-create">
+  <app-poll-create></app-poll-create>
+</div>
+<!-- end modal -->
+
+<!-- modal -->
+<div class="modal" id="list-of-poll">
+  <div class="modal-content">
+    <h4 class="center-align">{{modalPoll.question}}</h4>
+  </div>
+  <p class="center-align"><i>Crée le {{modalPoll.dateCreation | date: 'fullDate': undefined : 'fr'}}</i></p>
+  <p class="center-align">Assigné à la classe <b>{{modalPoll.class.title}}</b></p>
+  <br>
+  
+  <ul class="collection">
+    <li class="collection-item" *ngFor="let item of modalPoll.option; let i = index">
+      <p><b>Option {{i+1}}: </b>{{item.proposition}}
+          <span class="new badge orange" data-badge-caption="votes">{{item.vote}} </span>
+      </p>
+      
+       
+    </li>
+ 
+  </ul>
+     
+  <table class="hide-on-med-and-down">
+      <thead>
+    <tr>
+      </tr>
+    </thead>
+      <tbody>
+        <td>
+    <canvas id="pie"></canvas>
+    </td>
+  </tbody>
+    </table> 
+  <br>
+  <div class="center-align">
+    <button class="modal-action modal-close btn blue">Fermer</button>
+  </div>
+  <br>
+</div>
+<!-- end modal -->
+

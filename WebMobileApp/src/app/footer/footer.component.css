@@ -1,0 +1,12 @@
+.page-footer {
+    padding-top: 20px;
+    color: white;
+    background-color: rgb(59, 163, 153);
+    /*background-color: rgb(77,182,172);*/
+    /*background-color: rgb(3,155,220);*/
+    /*background-color: #f6921e;*/
+    /*background-color: #ee6e73;*/
+    /*position: absolute;
+    bottom: 0;*/
+    width: 100%; 
+}

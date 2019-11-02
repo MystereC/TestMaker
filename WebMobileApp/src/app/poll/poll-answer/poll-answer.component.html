@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<div class="row">
+  <div class="col s12 m12 l12">
+    <div id="contentPollAnswer">
+      <div class="card-panel" style="color:white; background-color:  #64B5F6">
+        <h4> <i class="material-icons">move_to_inbox</i> Sondage à répondre : du
+          {{poll.dateCreation | date :'fullDate' : undefined : 'fr'}}</h4>
+      </div>
+
+      <div class="card white darken-1">
+        <div class="card-content white-text">
+          <p style="color:black;">{{poll.question}}</p>
+        </div>
+        <div class="card-action">
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div *ngFor="let option of poll.option ;let i =index">
+              <div class="collection-item">
+                <label>
+                  <input type="radio" value={{option.proposition}} name="group" [(ngModel)]="idOfChoice"
+                    (change)="onSelectionChange(i)">
+                  <span>{{option.proposition}}</span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
