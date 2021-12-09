@@ -22,7 +22,7 @@
     "redoc-cli": "^0.7.0",
     "swagger-jsdoc": "^3.2.7",
     "swagger-to-html": "^0.4.0",
-    "swagger-ui": "^3.20.9"
+    "swagger-ui": "^4.1.2"
   },
   "devDependencies": {
     "swagger-jsdoc-generator": "^1.0.3"
